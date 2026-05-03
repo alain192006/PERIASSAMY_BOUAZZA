@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="International & mobilité étudiante — universités partenaires, programme Erasmus+, bourses et témoignages d'étudiants EFREI.">
+    <title>International — Vie étudiante EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .table-partenaires { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .table-partenaires th { background: var(--bleu); color: var(--blanc); padding: 11px 16px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-partenaires td { border: 1px solid #e8ecf5; padding: 11px 16px; }
+        .table-partenaires tr:nth-child(even) td { background: #f8f9fd; }
+        .table-partenaires td:first-child { font-weight: 600; color: var(--bleu); }
+        .pays-badge { display: inline-block; background: #f0f3fa; border: 1px solid #dde3f0; border-radius: 4px; padding: 2px 9px; font-size: 12px; color: #555; }
+        .temoignage-carte { background: var(--blanc); border-radius: 10px; padding: 28px; box-shadow: 0 3px 18px rgba(10,49,108,0.09); border-left: 4px solid var(--bleu); }
+        .temoignage-texte { font-size: 14.5px; color: #444; line-height: 1.8; font-style: italic; margin-bottom: 16px; }
+        .temoignage-auteur { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: var(--bleu); }
+        .temoignage-meta { font-size: 13px; color: #888; margin-top: 2px; }
+        .etape-mobilite { background: var(--blanc); border-radius: 8px; padding: 24px; box-shadow: 0 2px 12px rgba(10,49,108,0.07); display: flex; gap: 18px; align-items: flex-start; }
+        .etape-mobilite .num { width: 34px; height: 34px; background: var(--bleu); color: var(--blanc); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+        .aide-bloc { background: #f5f7fb; border-radius: 8px; padding: 24px; }
+        .aide-bloc h3 { color: #1e2937; font-size: 16px; margin-bottom: 10px; }
+        .aide-bloc p { font-size: 14px; color: #555; line-height: 1.7; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../formations/index.html">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="index.html" class="actif">Vie étudiante</a></li>
+                    <li><a href="../partenariats/index.html">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../permanences/index.html">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html">Vie étudiante</a></li>
+                <li>International</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Mobilité internationale</h1>
+            <p>Partir étudier à l'étranger pendant son cursus à l'EFREI, c'est possible — et fortement encouragé. Voici comment ça fonctionne.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;" class="anim-fadein">
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 42px; color: var(--bleu);" data-valeur="40" data-suffixe="+">0</div>
+                    <div style="font-size: 14px; color: #555; margin-top: 6px;">universités partenaires</div>
+                </div>
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 42px; color: var(--bleu);" data-valeur="22" data-suffixe="">0</div>
+                    <div style="font-size: 14px; color: #555; margin-top: 6px;">pays représentés</div>
+                </div>
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 42px; color: var(--bleu);" data-valeur="35" data-suffixe="%">0</div>
+                    <div style="font-size: 14px; color: #555; margin-top: 6px;">étudiants mobiles par promo</div>
+                </div>
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 42px; color: var(--bleu);" data-valeur="800" data-suffixe="€">0</div>
+                    <div style="font-size: 14px; color: #555; margin-top: 6px;">bourse Erasmus moyenne/mois</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Universités partenaires — sélection</h2>
+            
+            <p style="color: #555; max-width: 780px; margin-bottom: 28px;" class="anim-fadein">Le département Informatique entretient des accords bilatéraux avec des établissements en Europe, en Amérique du Nord, en Asie et en Amérique du Sud. Les crédits ECTS obtenus à l'étranger sont reconnus et intégrés dans le diplôme EFREI.</p>
+            <div class="tableau-wrapper anim-fadein">
+                <table class="table-partenaires">
+                    <thead>
+                        <tr>
+                            <th>Université</th>
+                            <th>Pays</th>
+                            <th>Niveau</th>
+                            <th>Durée possible</th>
+                            <th>Langue d'enseignement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Technische Universität Berlin</td>
+                            <td><span class="pays-badge">Allemagne</span></td>
+                            <td>CI2 – CI3</td>
+                            <td>1 semestre</td>
+                            <td>Anglais / Allemand</td>
+                        </tr>
+                        <tr>
+                            <td>Politecnico di Milano</td>
+                            <td><span class="pays-badge">Italie</span></td>
+                            <td>CI2 – CI3</td>
+                            <td>1 semestre</td>
+                            <td>Anglais</td>
+                        </tr>
+                        <tr>
+                            <td>Universitat Politècnica de Catalunya (UPC)</td>
+                            <td><span class="pays-badge">Espagne</span></td>
+                            <td>Bachelor 3 – CI2</td>
+                            <td>1 semestre</td>
+                            <td>Anglais / Espagnol</td>
+                        </tr>
+                        <tr>
+                            <td>KTH Royal Institute of Technology</td>
+                            <td><span class="pays-badge">Suède</span></td>
+                            <td>CI1 – CI3</td>
+                            <td>1 semestre</td>
+                            <td>Anglais</td>
+                        </tr>
+                        <tr>
+                            <td>University of Toronto — Faculty of Applied Science</td>
+                            <td><span class="pays-badge">Canada</span></td>
+                            <td>CI2 – CI3</td>
+                            <td>1 semestre</td>
+                            <td>Anglais</td>
+                        </tr>
+                        <tr>
+                            <td>National University of Singapore (NUS)</td>
+                            <td><span class="pays-badge">Singapour</span></td>
+                            <td>CI3 uniquement</td>
+                            <td>1 semestre</td>
+                            <td>Anglais</td>
+                        </tr>
+                        <tr>
+                            <td>Universidade de São Paulo (USP)</td>
+                            <td><span class="pays-badge">Brésil</span></td>
+                            <td>CI1 – CI2</td>
+                            <td>1 semestre</td>
+                            <td>Portugais / Anglais</td>
+                        </tr>
+                        <tr>
+                            <td>Vrije Universiteit Brussel (VUB)</td>
+                            <td><span class="pays-badge">Belgique</span></td>
+                            <td>Bachelor 3 – CI2</td>
+                            <td>1 ou 2 semestres</td>
+                            <td>Anglais / Néerlandais</td>
+                        </tr>
+                        <tr>
+                            <td>Warsaw University of Technology</td>
+                            <td><span class="pays-badge">Pologne</span></td>
+                            <td>CI1 – CI2</td>
+                            <td>1 semestre</td>
+                            <td>Anglais</td>
+                        </tr>
+                        <tr>
+                            <td>Waseda University — School of Science & Engineering</td>
+                            <td><span class="pays-badge">Japon</span></td>
+                            <td>CI2 – CI3</td>
+                            <td>1 semestre</td>
+                            <td>Anglais / Japonais</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 12.5px; color: #aaa; margin-top: 12px;">Liste non exhaustive — consultez le bureau des Relations Internationales pour la liste complète des partenariats actifs.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 860px;">
+            
+                <h2 id="erasmus-titre">Programme Erasmus+</h2>
+            
+            <p style="color: #555; max-width: 780px; margin-bottom: 28px;" class="anim-fadein">Erasmus+ est le principal dispositif de mobilité étudiant en Europe. L'EFREI Paris est membre actif du programme depuis 1993 et envoie chaque année une quarantaine d'étudiants dans des universités européennes partenaires. C'est l'option la plus simple et la mieux soutenue financièrement pour un premier séjour à l'étranger.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;" class="anim-fadein">
+                <div class="aide-bloc">
+                    <h3>Qui peut partir ?</h3>
+                    <p>Tout étudiant inscrit à l'EFREI depuis au moins un an, sans dette académique. La sélection se fait sur dossier (relevé de notes, lettre de motivation, niveau d'anglais ou langue du pays d'accueil).</p>
+                    <ul class="liste-tri" style="font-size: 13.5px; color: #555; margin-top: 10px;">
+                        <li>Avoir validé au moins 60 ECTS</li>
+                        <li>Niveau B2 en anglais minimum (ou langue du pays)</li>
+                        <li>Pas d'exclusion académique en cours</li>
+                    </ul>
+                </div>
+                <div class="aide-bloc">
+                    <h3>Financement disponible</h3>
+                    <p>La bourse Erasmus+ est versée mensuellement pendant la période de mobilité. Son montant dépend du pays de destination et du profil de l'étudiant (situation financière, handicap, etc.).</p>
+                    <ul class="liste-tri" style="font-size: 13.5px; color: #555; margin-top: 10px;">
+                        <li>Pays proches (Belgique, Espagne) : 600–700 €/mois</li>
+                        <li>Pays nordiques (Suède, Finlande) : 800–900 €/mois</li>
+                        <li>Compléments possibles : bourse régionale Île-de-France, aide CAF</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+                <h2>Comment partir — étapes clés</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 8px;" class="anim-fadein">
+                <div class="etape-mobilite">
+                    <div class="num">1</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 5px;">Choisissez votre destination (T+12 mois avant le départ)</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">Consultez la liste des partenaires et étudiez les catalogues de cours des universités qui vous intéressent. Le bureau des Relations Internationales organise une réunion d'information en début d'année — ne la ratez pas.</p>
+                    </div>
+                </div>
+                <div class="etape-mobilite">
+                    <div class="num">2</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 5px;">Déposez votre candidature (T+8 mois)</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">Remplissez le formulaire de candidature EFREI, joignez votre relevé de notes et une lettre de motivation. La sélection est validée par la coordinatrice internationale du département.</p>
+                    </div>
+                </div>
+                <div class="etape-mobilite">
+                    <div class="num">3</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 5px;">Signez le Learning Agreement (T+4 mois)</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">Le Learning Agreement liste les cours que vous suivrez à l'étranger et leur équivalent dans votre cursus EFREI. Il doit être co-signé par l'université d'accueil et votre responsable pédagogique. C'est ce document qui garantit la reconnaissance de vos crédits.</p>
+                    </div>
+                </div>
+                <div class="etape-mobilite">
+                    <div class="num">4</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 5px;">Partez et profitez (T0)</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">Assurez-vous d'activer votre VPN EFREI avant de partir pour garder accès aux ressources pédagogiques. Votre enseignant-référent reste joignable par email pour tout suivi académique à distance.</p>
+                    </div>
+                </div>
+                <div class="etape-mobilite">
+                    <div class="num">5</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 5px;">Rapport de retour & validation (T+1 mois)</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">À votre retour, vous devrez soumettre un rapport de mobilité et faire valider vos résultats par le service des Relations Internationales. Une fois les crédits intégrés, votre relevé de notes EFREI est mis à jour automatiquement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2 id="temoin-titre">Ils sont partis — ils en parlent</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="anim-fadein">
+                <div class="temoignage-carte">
+                    <p class="temoignage-texte">« J'ai passé un semestre à KTH Stockholm. Le niveau des cours était clairement différent de ce qu'on fait en France — plus de projets de recherche, moins de cours magistraux. Rentrer avec ça sur le CV, ça change vraiment la perception des recruteurs. »</p>
+                    <div class="temoignage-auteur">Chloé M.</div>
+                    <div class="temoignage-meta">CI2 — Filière Data Science · KTH Stockholm, Suède</div>
+                </div>
+                <div class="temoignage-carte">
+                    <p class="temoignage-texte">« J'hésitais à partir parce que j'avais peur de décrocher sur les matières EFREI. En pratique, le Learning Agreement est bien fait et j'ai pas eu de trou. Le plus dur c'était de trouver un appart à Milan — commencez tôt. »</p>
+                    <div class="temoignage-auteur">Amine B.</div>
+                    <div class="temoignage-meta">CI1 — Filière Sécurité & Réseaux · Politecnico di Milano, Italie</div>
+                </div>
+                <div class="temoignage-carte">
+                    <p class="temoignage-texte">« Six mois à Toronto, ça m'a ouvert des perspectives que je n'avais même pas imaginées. J'ai intégré une équipe de recherche sur le machine learning pendant le semestre et j'ai pu co-signer un papier. C'est le genre de chose impossible à faire en restant à Paris. »</p>
+                    <div class="temoignage-auteur">Yasmine K.</div>
+                    <div class="temoignage-meta">CI3 — Filière Data Science · University of Toronto, Canada</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 680px; text-align: center;" class="anim-fadein">
+            <div style="background: var(--bleu); border-radius: 10px; padding: 40px 32px; color: var(--blanc);">
+                <h2 style="font-size: 20px; margin-bottom: 12px;">Des questions sur la mobilité ?</h2>
+                <p style="font-size: 14px; opacity: 0.85; margin-bottom: 24px;">Le bureau des Relations Internationales organise des permanences tous les mardis de 14h à 17h en salle D012. Pour les demandes urgentes, envoyez un email avec votre promotion et votre projet de mobilité.</p>
+                <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:international@efrei.fr" class="btn" style="background: var(--jaune); color: var(--bleu); font-family: 'Montserrat', sans-serif; font-weight: 700;">Contacter le service RI</a>
+                    <a href="../permanences/index.html" class="btn btn-contour" style="color: var(--blanc); border-color: rgba(255,255,255,0.5);">Prendre un rendez-vous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="../formations/index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="index.html">Vie étudiante</a><a href="../partenariats/index.html">Partenariats</a><a href="../permanences/index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Vie étudiante</h4><nav class="footer-nav" aria-label="Liens vie étudiante"><a href="service-informatique.html">Service informatique</a><a href="associations.html">Associations</a><a href="academique-international.html">International</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Service informatique étudiant EFREI — accès aux équipements, licences logicielles, horaires et support technique.">
+    <title>Service informatique — Vie étudiante EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .table-horaires { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .table-horaires th { background: var(--bleu); color: var(--blanc); padding: 11px 16px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-horaires td { border: 1px solid #e8ecf5; padding: 11px 16px; }
+        .table-horaires tr:nth-child(even) td { background: #f8f9fd; }
+        .table-logiciels { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .table-logiciels th { background: var(--bleu); color: var(--blanc); padding: 11px 16px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-logiciels td { border: 1px solid #e8ecf5; padding: 11px 16px; }
+        .table-logiciels tr:nth-child(even) td { background: #f8f9fd; }
+        .badge-gratuit { display: inline-block; background: #00b894; color: #fff; border-radius: 4px; padding: 2px 9px; font-size: 12px; font-weight: 600; }
+        .badge-tarif { display: inline-block; background: var(--bleu); color: #fff; border-radius: 4px; padding: 2px 9px; font-size: 12px; font-weight: 600; }
+        .salle-carte { background: var(--blanc); border: 1px solid #e8ecf5; border-radius: 8px; padding: 24px; box-shadow: 0 2px 12px rgba(10,49,108,0.06); }
+        .salle-carte h3 { color: #1e2937; font-size: 16px; margin-bottom: 10px; }
+        .salle-carte .salle-info { font-size: 13.5px; color: #666; line-height: 1.6; }
+        .etape-support { display: flex; gap: 18px; align-items: flex-start; background: var(--blanc); padding: 22px; border-radius: 6px; box-shadow: 0 2px 12px rgba(10,49,108,0.08); }
+        .etape-num { width: 36px; height: 36px; background: var(--bleu); color: var(--blanc); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; flex-shrink: 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../formations/index.html">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="index.html" class="actif">Vie étudiante</a></li>
+                    <li><a href="../partenariats/index.html">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../permanences/index.html">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html">Vie étudiante</a></li>
+                <li>Service informatique</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Service informatique étudiant</h1>
+            <p>Équipements, logiciels, réseau et support technique — tout ce qu'il faut savoir pour travailler dans les meilleures conditions.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Salles informatiques</h2>
+            
+            <p class="anim-fadein" style="max-width: 780px; color: #555; margin-bottom: 32px;">Le département Informatique dispose de six salles équipées accessibles aux étudiants pendant les heures d'ouverture du campus. Elles sont principalement réservées aux TD et TP encadrés, mais certaines sont en libre accès hors enseignement.</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="anim-fadein">
+                <div class="salle-carte">
+                    <h3>Salle A101</h3>
+                    <div class="salle-info">
+                        <strong>Capacité :</strong> 30 postes<br>
+                        <strong>Configuration :</strong> Intel Core i7, 16 Go RAM, Ubuntu 22.04 LTS + Windows 11 dual-boot<br>
+                        <strong>Usage :</strong> TD/TP — réservée aux groupes planifiés<br>
+                        <strong>Accès libre :</strong> Non
+                    </div>
+                </div>
+                <div class="salle-carte">
+                    <h3>Salle A102</h3>
+                    <div class="salle-info">
+                        <strong>Capacité :</strong> 28 postes<br>
+                        <strong>Configuration :</strong> Intel Core i7, 16 Go RAM, Windows 11<br>
+                        <strong>Usage :</strong> TD/TP spécialisé — développement web & BDD<br>
+                        <strong>Accès libre :</strong> Non
+                    </div>
+                </div>
+                <div class="salle-carte">
+                    <h3>Salle A103</h3>
+                    <div class="salle-info">
+                        <strong>Capacité :</strong> 24 postes<br>
+                        <strong>Configuration :</strong> Intel Core i9, 32 Go RAM, Kali Linux + Windows 11<br>
+                        <strong>Usage :</strong> Lab cybersécurité — accès restreint, sur autorisation<br>
+                        <strong>Accès libre :</strong> Sur demande enseignant
+                    </div>
+                </div>
+                <div class="salle-carte">
+                    <h3>Salle B204</h3>
+                    <div class="salle-info">
+                        <strong>Capacité :</strong> 32 postes<br>
+                        <strong>Configuration :</strong> Intel Core i5, 8 Go RAM, Windows 11<br>
+                        <strong>Usage :</strong> Polyvalente — libre accès hors créneaux réservés<br>
+                        <strong>Accès libre :</strong> Oui (8h–20h)
+                    </div>
+                </div>
+                <div class="salle-carte">
+                    <h3>Salle B205</h3>
+                    <div class="salle-info">
+                        <strong>Capacité :</strong> 20 postes<br>
+                        <strong>Configuration :</strong> Intel Core i7, 16 Go RAM, Ubuntu 22.04 LTS<br>
+                        <strong>Usage :</strong> Projets étudiants — libre accès en soirée<br>
+                        <strong>Accès libre :</strong> Oui (8h–22h)
+                    </div>
+                </div>
+                <div class="salle-carte">
+                    <h3>Salle C101 — Lab IoT</h3>
+                    <div class="salle-info">
+                        <strong>Capacité :</strong> 16 postes + bancs électroniques<br>
+                        <strong>Configuration :</strong> Raspberry Pi 4, Arduino, oscilloscopes, alimentation réglable<br>
+                        <strong>Usage :</strong> Systèmes embarqués — sur réservation<br>
+                        <strong>Accès libre :</strong> Sur inscription via formulaire
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 780px;">
+            
+                <h2>Horaires d'ouverture</h2>
+            
+            <div class="tableau-wrapper anim-fadein">
+                <table class="table-horaires">
+                    <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th>Salles A101 / A102 / A103</th>
+                            <th>Salles B204 / B205 (libre accès)</th>
+                            <th>Support technique</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lundi</td><td>08h00 – 20h00</td><td>08h00 – 21h00</td><td>09h00 – 18h00</td></tr>
+                        <tr><td>Mardi</td><td>08h00 – 20h00</td><td>08h00 – 21h00</td><td>09h00 – 18h00</td></tr>
+                        <tr><td>Mercredi</td><td>08h00 – 20h00</td><td>08h00 – 21h00</td><td>09h00 – 17h00</td></tr>
+                        <tr><td>Jeudi</td><td>08h00 – 20h00</td><td>08h00 – 22h00</td><td>09h00 – 18h00</td></tr>
+                        <tr><td>Vendredi</td><td>08h00 – 19h00</td><td>08h00 – 22h00</td><td>09h00 – 17h00</td></tr>
+                        <tr><td>Samedi</td><td>Fermé</td><td>09h00 – 18h00</td><td>Fermé</td></tr>
+                        <tr><td>Dimanche</td><td>Fermé</td><td>Fermé</td><td>Fermé</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 12.5px; color: #aaa; margin-top: 12px;">* Les horaires peuvent être réduits pendant les périodes de vacances scolaires. Des créneaux spéciaux peuvent être ouverts en période d'examens sur demande.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Licences logicielles disponibles</h2>
+            
+            <p class="anim-fadein" style="max-width: 780px; color: #555; margin-bottom: 28px;">Grâce aux partenariats du département avec des éditeurs logiciels, les étudiants EFREI bénéficient d'un accès à de nombreuses licences gratuitement ou à tarif préférentiel. Ces accès sont valables pour la durée de la scolarité.</p>
+            <div class="tableau-wrapper anim-fadein">
+                <table class="table-logiciels">
+                    <thead>
+                        <tr>
+                            <th>Logiciel / Suite</th>
+                            <th>Catégorie</th>
+                            <th>Accès étudiant</th>
+                            <th>Plateformes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>JetBrains (IntelliJ, PyCharm, WebStorm…)</td>
+                            <td>IDE & développement</td>
+                            <td><span class="badge-gratuit">Gratuit</span></td>
+                            <td>Windows, macOS, Linux</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Office 365</td>
+                            <td>Bureautique</td>
+                            <td><span class="badge-gratuit">Gratuit</span></td>
+                            <td>Windows, macOS, web</td>
+                        </tr>
+                        <tr>
+                            <td>Azure DevOps + crédits Azure</td>
+                            <td>Cloud & DevOps</td>
+                            <td><span class="badge-gratuit">100 €/an offerts</span></td>
+                            <td>Web (cloud)</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub Education Pack</td>
+                            <td>Versioning & CI/CD</td>
+                            <td><span class="badge-gratuit">Gratuit</span></td>
+                            <td>Web, CLI</td>
+                        </tr>
+                        <tr>
+                            <td>MATLAB & Simulink</td>
+                            <td>Calcul scientifique</td>
+                            <td><span class="badge-gratuit">Gratuit (campus)</span></td>
+                            <td>Windows, macOS, Linux</td>
+                        </tr>
+                        <tr>
+                            <td>AutoCAD (Autodesk)</td>
+                            <td>CAO / modélisation</td>
+                            <td><span class="badge-gratuit">Gratuit (étudiant)</span></td>
+                            <td>Windows, web</td>
+                        </tr>
+                        <tr>
+                            <td>Adobe Creative Cloud</td>
+                            <td>Création graphique</td>
+                            <td><span class="badge-tarif">Tarif réduit — 19,99 €/mois</span></td>
+                            <td>Windows, macOS</td>
+                        </tr>
+                        <tr>
+                            <td>Cisco Packet Tracer</td>
+                            <td>Simulation réseau</td>
+                            <td><span class="badge-gratuit">Gratuit</span></td>
+                            <td>Windows, Linux</td>
+                        </tr>
+                        <tr>
+                            <td>VMware Workstation Pro</td>
+                            <td>Virtualisation</td>
+                            <td><span class="badge-gratuit">Gratuit (via académique)</span></td>
+                            <td>Windows, Linux</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 12.5px; color: #aaa; margin-top: 12px;">Pour activer ces licences, rendez-vous sur le portail étudiant avec votre adresse <strong>@efrei.net</strong>. En cas de problème d'activation, contactez le service informatique.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 860px;">
+            
+                <h2 id="support-titre">Comment obtenir du support technique</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 16px;" class="anim-fadein">
+                <div class="etape-support">
+                    <div class="etape-num">1</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 16px; margin-bottom: 6px;">Consultez la FAQ en ligne</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">La majorité des problèmes courants (connexion au Wi-Fi, activation de licence, accès VPN, oubli de mot de passe) sont documentés sur le portail d'aide étudiant. Commencez par là avant d'ouvrir un ticket.</p>
+                    </div>
+                </div>
+                <div class="etape-support">
+                    <div class="etape-num">2</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 16px; margin-bottom: 6px;">Ouvrez un ticket via le portail</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">Si la FAQ ne répond pas à votre problème, créez un ticket sur le portail Helpdesk avec votre adresse @efrei.net. Précisez le matériel concerné, le système d'exploitation et le message d'erreur exact. Plus votre description est précise, plus la résolution sera rapide.</p>
+                    </div>
+                </div>
+                <div class="etape-support">
+                    <div class="etape-num">3</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 16px; margin-bottom: 6px;">Passez en présentiel au bureau DSI</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">Pour les problèmes nécessitant une intervention physique (poste bloqué, carte réseau, matériel endommagé), passez au bureau de la Direction des Systèmes d'Information situé au bâtiment C, bureau C015, rez-de-chaussée. Un technicien est disponible sans rendez-vous pendant les heures d'ouverture du support.</p>
+                    </div>
+                </div>
+                <div class="etape-support">
+                    <div class="etape-num">4</div>
+                    <div>
+                        <h3 style="color: #1e2937; font-size: 16px; margin-bottom: 6px;">Contact d'urgence</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">En cas d'incident bloquant en plein TD ou TP (panne de serveur, coupure réseau en salle), contactez directement l'enseignant qui peut activer la procédure d'escalade vers l'équipe technique en moins de 15 minutes. L'adresse email de support est disponible dans le portail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width: 860px;">
+            
+                <h2>Réseau Wi-Fi & accès à distance</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;" class="anim-fadein">
+                <div style="background: #f5f7fb; border-radius: 8px; padding: 24px;">
+                    <h3 style="color: #1e2937; font-size: 16px; margin-bottom: 12px;">Wi-Fi campus</h3>
+                    <p style="font-size: 14px; color: #555; line-height: 1.6;">Le réseau <strong>EFREI-Student</strong> est accessible sur l'ensemble du campus avec vos identifiants EFREI. Une deuxième connexion est possible via <strong>Eduroam</strong>, qui donne accès au Wi-Fi dans toutes les universités partenaires en France et en Europe.</p>
+                    <ul class="liste-tri" style="margin-top: 12px; font-size: 14px; color: #555;">
+                        <li>Identifiants : adresse @efrei.net + mot de passe portail</li>
+                        <li>Bande passante : 1 Gbps fibre — partagée par salle</li>
+                        <li>Couverture : 100 % des bâtiments A, B, C</li>
+                    </ul>
+                </div>
+                <div style="background: #f5f7fb; border-radius: 8px; padding: 24px;">
+                    <h3 style="color: #1e2937; font-size: 16px; margin-bottom: 12px;">Accès VPN & ressources distantes</h3>
+                    <p style="font-size: 14px; color: #555; line-height: 1.6;">Depuis chez vous, le VPN institutionnel permet d'accéder aux serveurs de développement, aux licences réseau (MATLAB, Visual Studio) et aux machines virtuelles du département comme si vous étiez sur le campus.</p>
+                    <ul class="liste-tri" style="margin-top: 12px; font-size: 14px; color: #555;">
+                        <li>Client VPN : Cisco AnyConnect (téléchargement sur le portail)</li>
+                        <li>Authentification double facteur requise</li>
+                        <li>Disponible 24h/24, 7j/7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="../formations/index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="index.html">Vie étudiante</a><a href="../partenariats/index.html">Partenariats</a><a href="../permanences/index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Vie étudiante</h4><nav class="footer-nav" aria-label="Liens vie étudiante"><a href="service-informatique.html">Service informatique</a><a href="associations.html">Associations</a><a href="academique-international.html">International</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

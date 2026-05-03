@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partenariats entreprises du département Informatique EFREI — insertion professionnelle, stages, alternance et statistiques d'emploi.">
+    <title>Partenariats entreprises — EFREI Informatique</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .partenaire-logo { background: var(--blanc); border: 1px solid #e8ecf5; border-radius: 8px; padding: 24px 20px; display: flex; align-items: center; justify-content: center; min-height: 90px; box-shadow: 0 2px 10px rgba(10,49,108,0.05); transition: box-shadow 0.2s ease, transform 0.2s ease; }
+        .partenaire-logo:hover { box-shadow: 0 4px 20px rgba(10,49,108,0.12); transform: translateY(-2px); }
+        .partenaire-logo span { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; color: var(--bleu); letter-spacing: -0.5px; text-align: center; }
+        .table-insertion { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .table-insertion th { background: var(--bleu); color: var(--blanc); padding: 11px 16px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-insertion td { border: 1px solid #e8ecf5; padding: 11px 16px; }
+        .table-insertion tr:nth-child(even) td { background: #f8f9fd; }
+        .table-insertion td:first-child { font-weight: 600; color: var(--bleu); }
+        .table-debouches-par { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .table-debouches-par th { background: var(--bleu); color: var(--blanc); padding: 11px 16px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-debouches-par td { border: 1px solid #e8ecf5; padding: 11px 16px; }
+        .table-debouches-par tr:nth-child(even) td { background: #f8f9fd; }
+        .filiere-tag { display: inline-block; border-radius: 20px; padding: 3px 11px; font-size: 11.5px; font-family: 'Montserrat', sans-serif; font-weight: 600; color: #fff; }
+        .offre-carte { background: var(--blanc); border: 1px solid #e8ecf5; border-radius: 8px; padding: 24px; box-shadow: 0 2px 12px rgba(10,49,108,0.06); }
+        .offre-carte h3 { color: #1e2937; font-size: 16px; margin-bottom: 8px; }
+        .offre-carte .offre-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+        .offre-meta-item { font-size: 12.5px; color: #777; background: #f0f3fa; border-radius: 4px; padding: 3px 9px; }
+        .offre-carte p { font-size: 13.5px; color: #555; line-height: 1.6; }
+        .stat-chiffre { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 38px; color: var(--bleu); }
+        .stat-label { font-size: 13.5px; color: #555; margin-top: 4px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../formations/index.html">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="../vie-etudiante/index.html">Vie étudiante</a></li>
+                    <li><a href="index.html" class="actif">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../permanences/index.html">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li>Partenariats</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Partenariats entreprises</h1>
+            <p>Les entreprises partenaires du département pour les stages, l'alternance et l'insertion professionnelle.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;" class="anim-fadein">
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div class="stat-chiffre" data-valeur="94" data-suffixe="%">0</div>
+                    <div class="stat-label">taux d'insertion à 6 mois</div>
+                </div>
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div class="stat-chiffre" data-valeur="80" data-suffixe="+">0</div>
+                    <div class="stat-label">entreprises partenaires actives</div>
+                </div>
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div class="stat-chiffre" data-valeur="42" data-suffixe="k€">0</div>
+                    <div class="stat-label">salaire médian à l'embauche</div>
+                </div>
+                <div style="text-align: center; background: var(--blanc); padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(10,49,108,0.07);">
+                    <div class="stat-chiffre" data-valeur="60" data-suffixe="%">0</div>
+                    <div class="stat-label">embauches suite à l'alternance</div>
+                </div>
+            </div>
+            <p style="font-size: 12px; color: #bbb; text-align: center; margin-top: 16px;">Source : enquête insertion EFREI 2024 — promotion ingénieur 2023.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Nos partenaires principaux</h2>
+            
+            <p style="color: #555; max-width: 780px; margin-bottom: 32px;" class="anim-fadein">Ces entreprises recrutent régulièrement des étudiants du département pour des stages ou de l'alternance. Certaines participent aussi aux jurys de soutenance.</p>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;" class="anim-fadein">
+                <div class="partenaire-logo"><span>Capgemini</span></div>
+                <div class="partenaire-logo"><span>Thales</span></div>
+                <div class="partenaire-logo"><span>Sopra Steria</span></div>
+                <div class="partenaire-logo"><span>BNP Paribas</span></div>
+                <div class="partenaire-logo"><span>Orange</span></div>
+                <div class="partenaire-logo"><span>Airbus</span></div>
+                <div class="partenaire-logo"><span>Société Générale</span></div>
+                <div class="partenaire-logo"><span>Atos</span></div>
+                <div class="partenaire-logo"><span>Renault Group</span></div>
+                <div class="partenaire-logo"><span>Dassault Systèmes</span></div>
+                <div class="partenaire-logo"><span>IBM France</span></div>
+                <div class="partenaire-logo"><span>Accenture</span></div>
+                <div class="partenaire-logo"><span>CGI</span></div>
+                <div class="partenaire-logo"><span>Wavestone</span></div>
+                <div class="partenaire-logo"><span>Alten</span></div>
+                <div class="partenaire-logo"><span>Econocom</span></div>
+                <div class="partenaire-logo"><span>Leboncoin</span></div>
+                <div class="partenaire-logo"><span>Doctolib</span></div>
+                <div class="partenaire-logo"><span>Criteo</span></div>
+                <div class="partenaire-logo"><span>Contentsquare</span></div>
+            </div>
+            <p style="font-size: 12.5px; color: #aaa; margin-top: 14px; text-align: center;">+ 60 autres entreprises partenaires — PME, ETI, startups et administrations publiques.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 900px;">
+            
+                <h2 id="alternance-titre">Stages & alternance</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;" class="anim-fadein">
+                <div style="background: var(--blanc); border-radius: 8px; padding: 28px; box-shadow: 0 2px 14px rgba(10,49,108,0.08);">
+                    <h3 style="color: #1e2937; font-size: 17px; margin-bottom: 14px;">Stages obligatoires</h3>
+                    <p style="font-size: 14px; color: #555; line-height: 1.7;">Chaque cursus intègre des stages obligatoires à différents stades de la formation. Ces périodes en entreprise constituent une part importante de l'évaluation finale et sont encadrées par un tuteur académique.</p>
+                    <ul class="liste-tri" style="margin-top: 14px; font-size: 14px; color: #555;">
+                        <li>Bachelor 2 : stage de 8 semaines minimum (technicien)</li>
+                        <li>Bachelor 3 : stage de 3 mois minimum (assistant développeur)</li>
+                        <li>CI1 & CI2 : stages intermédiaires cumulant 5 mois</li>
+                        <li>CI3 : Projet de Fin d'Études 5–6 mois (PFE)</li>
+                    </ul>
+                </div>
+                <div style="background: var(--blanc); border-radius: 8px; padding: 28px; box-shadow: 0 2px 14px rgba(10,49,108,0.08);">
+                    <h3 style="color: #1e2937; font-size: 17px; margin-bottom: 14px;">Contrat d'alternance</h3>
+                    <p style="font-size: 14px; color: #555; line-height: 1.7;">L'alternance est ouverte à tous les étudiants du cycle ingénieur. Elle se fait sur un rythme de 3 semaines entreprise / 1 semaine école, ce qui permet à l'étudiant de financer une grande partie de ses études tout en acquérant une expérience professionnelle réelle.</p>
+                    <ul class="liste-tri" style="margin-top: 14px; font-size: 14px; color: #555;">
+                        <li>Rémunération : 50 à 80 % du SMIC selon l'âge et l'année</li>
+                        <li>Prise en charge des frais de scolarité par l'entreprise via l'OPCO</li>
+                        <li>Accompagnement par le service des Relations Entreprises</li>
+                        <li>Forum alternance annuel en septembre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Débouchés par filière — promotion 2023</h2>
+            
+            <div class="tableau-wrapper anim-fadein">
+                <table class="table-debouches-par">
+                    <thead>
+                        <tr>
+                            <th>Filière</th>
+                            <th>Secteurs d'embauche principaux</th>
+                            <th>Salaire médian brut</th>
+                            <th>Taux CDI à 6 mois</th>
+                            <th>Entreprises recruteuses top 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="filiere-tag" style="background: #0A316C;">IT & Software</span></td>
+                            <td>ESN, fintech, e-commerce</td>
+                            <td>41 000 €</td>
+                            <td>91 %</td>
+                            <td>Capgemini, Sopra Steria, CGI</td>
+                        </tr>
+                        <tr>
+                            <td><span class="filiere-tag" style="background: #6c3483;">Data Science & IA</span></td>
+                            <td>Banque, santé, marketing digital</td>
+                            <td>44 000 €</td>
+                            <td>96 %</td>
+                            <td>BNP Paribas, Criteo, Doctolib</td>
+                        </tr>
+                        <tr>
+                            <td><span class="filiere-tag" style="background: #c0392b;">Sécurité & Réseaux</span></td>
+                            <td>Défense, OIV, cabinets audit</td>
+                            <td>43 000 €</td>
+                            <td>98 %</td>
+                            <td>Thales, Orange Cyberdefense, Wavestone</td>
+                        </tr>
+                        <tr>
+                            <td><span class="filiere-tag" style="background: #117a65;">Systèmes Embarqués</span></td>
+                            <td>Automobile, aérospatial, industrie</td>
+                            <td>40 500 €</td>
+                            <td>93 %</td>
+                            <td>Renault, Airbus, Dassault Systèmes</td>
+                        </tr>
+                        <tr>
+                            <td><span class="filiere-tag" style="background: #555;">Bachelor (tous parcours)</span></td>
+                            <td>PME, startups, ESN entrée de gamme</td>
+                            <td>32 000 €</td>
+                            <td>87 %</td>
+                            <td>Alten, Econocom, startups IDF</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 860px;">
+            
+                <h2>Forum Emploi & Alternance EFREI</h2>
+            
+            <p style="color: #555; max-width: 780px; margin-bottom: 28px;" class="anim-fadein">Chaque année en septembre, le département Informatique organise un forum dédié sur le campus de Villejuif. Une cinquantaine d'entreprises tiennent un stand pour rencontrer les étudiants, recueillir des CV et proposer des offres de stage, d'alternance et d'emploi. C'est l'événement le plus important de l'année côté insertion.</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid #e8ecf4; border-radius: 8px; overflow: hidden;" class="anim-fadein">
+                <div style="padding: 22px 24px; border-right: 1px solid #e8ecf4;">
+                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #bbb; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 8px;">Date</div>
+                    <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 6px;">Prochaine édition</h3>
+                    <p style="font-size: 14px; color: #555;">19 septembre 2025 — Hall B, campus Villejuif · 10h–17h</p>
+                </div>
+                <div style="padding: 22px 24px; border-right: 1px solid #e8ecf4;">
+                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #bbb; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 8px;">Exposants</div>
+                    <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 6px;">50+ stands</h3>
+                    <p style="font-size: 14px; color: #555;">Grandes entreprises, ETI, startups et cabinets de conseil</p>
+                </div>
+                <div style="padding: 22px 24px;">
+                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #bbb; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 8px;">Accès</div>
+                    <h3 style="color: #1e2937; font-size: 15px; margin-bottom: 6px;">Ouvert à tous</h3>
+                    <p style="font-size: 14px; color: #555;">Bachelor, cycle ingénieur — venez avec votre CV et votre badge étudiant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Offres récentes — extrait</h2>
+            
+            <p style="color: #555; max-width: 780px; margin-bottom: 28px;" class="anim-fadein">Ces offres sont communiquées par nos partenaires et publiées sur l'espace emploi du portail étudiant. Les dates de dépôt de candidature sont indiquées à titre indicatif.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="anim-fadein">
+                <div class="offre-carte">
+                    <h3>Stage Développeur Full-Stack — 6 mois</h3>
+                    <div class="offre-meta">
+                        <span class="offre-meta-item">Doctolib</span>
+                        <span class="offre-meta-item">Paris 9e</span>
+                        <span class="offre-meta-item">Stage PFE</span>
+                        <span class="offre-meta-item">Fév. 2026</span>
+                    </div>
+                    <p>Intégrer une squad produit Doctolib pour contribuer au développement de nouvelles fonctionnalités sur la plateforme web (React, Ruby on Rails). Mission avec accompagnement d'un senior engineer.</p>
+                </div>
+                <div class="offre-carte">
+                    <h3>Alternance Ingénieur Cybersécurité — 2 ans</h3>
+                    <div class="offre-meta">
+                        <span class="offre-meta-item">Thales</span>
+                        <span class="offre-meta-item">Vélizy-Villacoublay</span>
+                        <span class="offre-meta-item">Alternance CI2/CI3</span>
+                        <span class="offre-meta-item">Sept. 2025</span>
+                    </div>
+                    <p>Rejoindre l'équipe Cyber SOC de Thales pour participer aux opérations de surveillance, d'analyse d'incidents et de veille sur les menaces. Environnement industriel SCADA inclus.</p>
+                </div>
+                <div class="offre-carte">
+                    <h3>Stage Data Analyst — 4 mois</h3>
+                    <div class="offre-meta">
+                        <span class="offre-meta-item">BNP Paribas</span>
+                        <span class="offre-meta-item">Paris 8e</span>
+                        <span class="offre-meta-item">Stage CI1</span>
+                        <span class="offre-meta-item">Juin 2025</span>
+                    </div>
+                    <p>Mission au sein de l'équipe Data de BNP Paribas Personal Finance. Analyse de portefeuilles clients, construction de tableaux de bord Power BI, automatisation de reportings Python.</p>
+                </div>
+                <div class="offre-carte">
+                    <h3>Alternance Ingénieur Embarqué — 1 an</h3>
+                    <div class="offre-meta">
+                        <span class="offre-meta-item">Renault Group</span>
+                        <span class="offre-meta-item">Guyancourt</span>
+                        <span class="offre-meta-item">Alternance CI2</span>
+                        <span class="offre-meta-item">Sept. 2025</span>
+                    </div>
+                    <p>Contribution au développement firmware de l'unité de contrôle de la prochaine génération de véhicules électriques. C embarqué, AUTOSAR, outils de tests HIL.</p>
+                </div>
+            </div>
+            <p style="font-size: 12.5px; color: #aaa; margin-top: 14px;">Toutes les offres disponibles sont publiées sur le portail étudiant EFREI — connectez-vous avec votre adresse @efrei.net pour y accéder.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 700px; text-align: center;">
+            <div style="background: var(--bleu); border-radius: 10px; padding: 40px 32px; color: var(--blanc);" class="anim-fadein">
+                <h2 style="font-size: 20px; margin-bottom: 12px;">Vous êtes une entreprise ?</h2>
+                <p style="font-size: 14px; opacity: 0.85; margin-bottom: 24px;">Vous souhaitez accueillir un stagiaire, un alternant, ou proposer une offre d'emploi aux diplômés EFREI ? Contactez le service des Relations Entreprises — nous vous répondons sous 48h.</p>
+                <a href="../contact/index.html" class="btn" style="background: var(--jaune); color: var(--bleu); font-family: 'Montserrat', sans-serif; font-weight: 700;">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="../formations/index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="../vie-etudiante/index.html">Vie étudiante</a><a href="index.html">Partenariats</a><a href="../permanences/index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Partenariats</h4><nav class="footer-nav" aria-label="Liens partenariats"><a href="index.html">Nos partenaires</a><a href="../contact/index.html">Proposer un partenariat</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

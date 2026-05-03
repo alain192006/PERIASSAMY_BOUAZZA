@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cycle ingénieur Bac+5 en informatique à l'EFREI Paris — 4 filières de spécialisation : IT, Data Science, Sécurité & Réseaux, Systèmes Embarqués.">
+    <title>Cycle ingénieur — Formations EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .filiere-bloc { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start; padding: 56px 0; border-bottom: 1px solid #eef0f5; }
+        .filiere-bloc:last-of-type { border-bottom: none; }
+        .filiere-sidebar { position: sticky; top: 100px; }
+        .filiere-card { border-radius: 10px; padding: 30px 24px; color: var(--blanc); text-align: center; }
+        .filiere-card .filiere-numero { font-size: 13px; font-family: 'Montserrat', sans-serif; font-weight: 600; opacity: 0.75; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+        .filiere-card h2 { font-size: 20px; line-height: 1.3; margin-bottom: 14px; color: var(--blanc); }
+        .filiere-card .filiere-badge { display: inline-block; background: rgba(255,255,255,0.18); border-radius: 20px; padding: 5px 14px; font-size: 12px; font-family: 'Montserrat', sans-serif; font-weight: 600; }
+        .filiere-nav { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .filiere-nav a { font-size: 13px; color: var(--bleu); font-weight: 600; text-decoration: none; }
+        .filiere-nav a:hover { text-decoration: underline; }
+        .filiere-contenu h3 { color: #1e2937; font-size: 18px; margin: 28px 0 12px; }
+        .grille-comp { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+        .table-debouches { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
+        .table-debouches th { background: var(--bleu); color: var(--blanc); padding: 10px 14px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-debouches td { border: 1px solid #e8ecf5; padding: 10px 14px; }
+        .table-debouches tr:nth-child(even) td { background: #f8f9fd; }
+        .table-comparatif { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .table-comparatif th { background: var(--bleu); color: var(--blanc); padding: 12px 14px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-comparatif td { border: 1px solid #e8ecf5; padding: 11px 14px; }
+        .table-comparatif tr:nth-child(even) td { background: #f8f9fd; }
+        .table-comparatif td:first-child { font-weight: 600; color: var(--bleu); }
+        .badge-oui { display: inline-block; background: #00b894; color: #fff; border-radius: 4px; padding: 2px 9px; font-size: 12px; font-weight: 600; }
+        .badge-non { display: inline-block; background: #dfe6e9; color: #636e72; border-radius: 4px; padding: 2px 9px; font-size: 12px; font-weight: 600; }
+        @media (max-width: 900px) {
+            .filiere-bloc { grid-template-columns: 1fr; gap: 28px; }
+            .filiere-sidebar { position: static; }
+            .grille-comp { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="index.html" class="actif">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="../vie-etudiante/index.html">Vie étudiante</a></li>
+                    <li><a href="../partenariats/index.html">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../permanences/index.html">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html">Formations</a></li>
+                <li>Cycle ingénieur</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Cycle ingénieur — Bac+5</h1>
+            <p>Quatre filières au choix pour se spécialiser et obtenir le diplôme d'ingénieur.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair" style="padding: 60px 0;">
+        <div class="container" style="max-width: 860px;">
+            <h2 style="color: var(--bleu); font-size: 26px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-weight: 700;">Le diplôme d'ingénieur EFREI</h2>
+            <p>Le cycle ingénieur dure 3 ans après la prépa intégrée (ou 2 ans pour les admissions parallèles Bac+3). Le diplôme est accrédité par la Commission des titres d'ingénieur (CTI) et reconnu au niveau européen via EUR-ACE.</p>
+            <p style="margin-top: 14px;">Dès la première année du cycle (CI1), les étudiants choisissent une filière de spécialisation parmi les quatre proposées par le département. Cette orientation structure ensuite l'ensemble des cours, projets et interventions professionnelles jusqu'à la fin du cursus.</p>
+            <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="#it" class="btn btn-bleu" style="font-size: 13px; padding: 10px 18px;">IT & Software</a>
+                <a href="#data" class="btn btn-bleu" style="font-size: 13px; padding: 10px 18px;">Data Science</a>
+                <a href="#securite" class="btn btn-bleu" style="font-size: 13px; padding: 10px 18px;">Sécurité & Réseaux</a>
+                <a href="#embarques" class="btn btn-bleu" style="font-size: 13px; padding: 10px 18px;">Systèmes Embarqués</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="it">
+        <div class="container">
+            <div class="filiere-bloc anim-fadein">
+                <div class="filiere-sidebar">
+                    <div class="filiere-card" style="background: linear-gradient(135deg, #0A316C 0%, #1a4fa0 100%);">
+                        <div class="filiere-numero">Filière 01</div>
+                        <h2>Ingénierie Logicielle & IT</h2>
+                        <div class="filiere-badge">Bac+5 · 3 ans</div>
+                    </div>
+                    <div class="filiere-nav">
+                        <a href="#data">→ Data Science</a>
+                        <a href="#securite">→ Sécurité & Réseaux</a>
+                        <a href="#embarques">→ Systèmes Embarqués</a>
+                    </div>
+                </div>
+                <div class="filiere-contenu">
+                    <p>La filière <strong>Ingénierie Logicielle & IT</strong> forme des ingénieurs capables de concevoir, développer et maintenir des systèmes informatiques complexes. On y travaille autant sur l'architecture logicielle que sur les pratiques DevOps et l'ingénierie cloud. Ce qui la distingue vraiment, c'est le focus sur les projets longs : chaque semestre, les étudiants livrent une application complète en équipe, avec suivi qualité, tests automatisés et mise en production réelle. On apprend par la pratique, pas uniquement par des cours magistraux.</p>
+
+                    <h3>Compétences développées</h3>
+                    <ul class="liste-tri grille-comp">
+                        <li>Architecture logicielle (MVC, microservices, event-driven)</li>
+                        <li>Développement full-stack (React, Node.js, Spring Boot)</li>
+                        <li>Intégration & déploiement continus (CI/CD, Docker, Kubernetes)</li>
+                        <li>Cloud computing (AWS, Azure, GCP — fondamentaux)</li>
+                        <li>Qualité logicielle & tests automatisés (JUnit, Selenium)</li>
+                        <li>Gestion de projet agile (Scrum, Kanban)</li>
+                        <li>Bases de données relationnelles & NoSQL</li>
+                        <li>API REST & GraphQL — conception et sécurisation</li>
+                    </ul>
+
+                    <h3>Débouchés professionnels</h3>
+                    <table class="table-debouches">
+                        <thead>
+                            <tr>
+                                <th>Métier</th>
+                                <th>Secteurs typiques</th>
+                                <th>Salaire débutant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ingénieur logiciel / développeur senior</td><td>ESN, startups, banque</td><td>38 000 – 46 000 €</td></tr>
+                            <tr><td>Architecte applicatif</td><td>Grands groupes, cabinets conseil</td><td>44 000 – 55 000 €</td></tr>
+                            <tr><td>Ingénieur DevOps / SRE</td><td>Cloud, e-commerce, fintech</td><td>42 000 – 52 000 €</td></tr>
+                            <tr><td>Tech Lead / CTO (à terme)</td><td>Startups, scale-ups</td><td>50 000 €+</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair" id="data">
+        <div class="container">
+            <div class="filiere-bloc anim-fadein">
+                <div class="filiere-sidebar">
+                    <div class="filiere-card" style="background: linear-gradient(135deg, #6c3483 0%, #a569bd 100%);">
+                        <div class="filiere-numero">Filière 02</div>
+                        <h2>Data Science & Intelligence Artificielle</h2>
+                        <div class="filiere-badge">Bac+5 · 3 ans</div>
+                    </div>
+                    <div class="filiere-nav">
+                        <a href="#it">→ IT & Software</a>
+                        <a href="#securite">→ Sécurité & Réseaux</a>
+                        <a href="#embarques">→ Systèmes Embarqués</a>
+                    </div>
+                </div>
+                <div class="filiere-contenu">
+                    <p>La filière <strong>Data Science & IA</strong> allie mathématiques appliquées, statistiques et programmation pour former des profils capables d'exploiter des volumes massifs de données. Les cours montent progressivement : fondations (algèbre linéaire, probabilités, Python scientifique), puis machine learning supervisé et non supervisé, deep learning, NLP. Chaque module s'accompagne d'un projet sur des jeux de données réels — pas de théorie sans mise en pratique immédiate.</p>
+                    <p style="margin-top: 12px;">C'est la filière qui recrute le plus vite. Quasi tous les étudiants ont un CDI ou un contrat en alternance bien avant la fin de leur dernière année.</p>
+
+                    <h3>Compétences développées</h3>
+                    <ul class="liste-tri grille-comp">
+                        <li>Mathématiques pour la data : statistiques, algèbre linéaire, optimisation</li>
+                        <li>Python scientifique (NumPy, Pandas, Scikit-learn, PyTorch)</li>
+                        <li>Machine learning supervisé & non supervisé</li>
+                        <li>Deep learning & réseaux de neurones convolutifs</li>
+                        <li>Traitement du langage naturel (NLP, transformers)</li>
+                        <li>Big Data : Spark, Hadoop, Kafka</li>
+                        <li>MLOps : déploiement et monitoring de modèles en production</li>
+                    </ul>
+
+                    <h3>Débouchés professionnels</h3>
+                    <table class="table-debouches">
+                        <thead>
+                            <tr>
+                                <th>Métier</th>
+                                <th>Secteurs typiques</th>
+                                <th>Salaire débutant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Data Scientist</td><td>Finance, santé, retail, marketing</td><td>40 000 – 50 000 €</td></tr>
+                            <tr><td>Machine Learning Engineer</td><td>Tech, startups IA, conseil</td><td>44 000 – 56 000 €</td></tr>
+                            <tr><td>Data Analyst / BI Developer</td><td>Tous secteurs</td><td>35 000 – 44 000 €</td></tr>
+                            <tr><td>AI Researcher (en doctorat ou R&D)</td><td>Laboratoires, grands groupes tech</td><td>48 000 €+</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="securite">
+        <div class="container">
+            <div class="filiere-bloc anim-fadein">
+                <div class="filiere-sidebar">
+                    <div class="filiere-card" style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);">
+                        <div class="filiere-numero">Filière 03</div>
+                        <h2>Sécurité des Systèmes & Réseaux</h2>
+                        <div class="filiere-badge">Bac+5 · 3 ans</div>
+                    </div>
+                    <div class="filiere-nav">
+                        <a href="#it">→ IT & Software</a>
+                        <a href="#data">→ Data Science</a>
+                        <a href="#embarques">→ Systèmes Embarqués</a>
+                    </div>
+                </div>
+                <div class="filiere-contenu">
+                    <p>La filière <strong>Sécurité des Systèmes & Réseaux</strong> forme des ingénieurs spécialisés dans la protection des infrastructures, la détection d'intrusion et la réponse aux incidents. C'est l'une des filières les plus demandées du marché, avec un taux de placement quasi immédiat à la sortie. Les étudiants travaillent dans un lab dédié : on apprend à attaquer pour mieux défendre, avec des exercices de pentesting supervisés, de l'analyse forensique et des TP sur des réseaux physiques. La cybersécurité ne s'apprend pas sur PowerPoint.</p>
+                    <p style="margin-top: 12px;">Petite précision utile : cette filière demande un vrai intérêt pour les systèmes et les réseaux bas niveau. Si vous venez uniquement pour "le côté hacking", ça peut surprendre au premier semestre.</p>
+
+                    <h3>Compétences développées</h3>
+                    <ul class="liste-tri grille-comp">
+                        <li>Réseaux avancés : TCP/IP, BGP, OSPF, VLAN, SD-WAN</li>
+                        <li>Sécurité offensive : pentesting, fuzzing, exploitation</li>
+                        <li>Sécurité défensive : SIEM, SOC, détection d'anomalies</li>
+                        <li>Cryptographie appliquée (PKI, TLS, chiffrement symétrique/asymétrique)</li>
+                        <li>Sécurité cloud & conteneurs (Zero Trust, IAM, Kubernetes hardening)</li>
+                        <li>Analyse forensique & réponse aux incidents (DFIR)</li>
+                        <li>Conformité & réglementation : RGPD, NIS2, ISO 27001</li>
+                        <li>Reverse engineering & analyse de malwares</li>
+                    </ul>
+
+                    <h3>Débouchés professionnels</h3>
+                    <table class="table-debouches">
+                        <thead>
+                            <tr>
+                                <th>Métier</th>
+                                <th>Secteurs typiques</th>
+                                <th>Salaire débutant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ingénieur cybersécurité / analyste SOC</td><td>Banque, défense, OIV</td><td>40 000 – 50 000 €</td></tr>
+                            <tr><td>Pentester / Red Team</td><td>Cabinets audit, ESN sécu</td><td>42 000 – 54 000 €</td></tr>
+                            <tr><td>Architecte sécurité réseau</td><td>Télécoms, grands groupes</td><td>48 000 – 62 000 €</td></tr>
+                            <tr><td>RSSI adjoint / consultant GRC</td><td>Conseil, secteur public</td><td>45 000 – 58 000 €</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair" id="embarques">
+        <div class="container">
+            <div class="filiere-bloc anim-fadein">
+                <div class="filiere-sidebar">
+                    <div class="filiere-card" style="background: linear-gradient(135deg, #117a65 0%, #1abc9c 100%);">
+                        <div class="filiere-numero">Filière 04</div>
+                        <h2>Systèmes Embarqués & IoT</h2>
+                        <div class="filiere-badge">Bac+5 · 3 ans</div>
+                    </div>
+                    <div class="filiere-nav">
+                        <a href="#it">→ IT & Software</a>
+                        <a href="#data">→ Data Science</a>
+                        <a href="#securite">→ Sécurité & Réseaux</a>
+                    </div>
+                </div>
+                <div class="filiere-contenu">
+                    <p>La filière <strong>Systèmes Embarqués & IoT</strong> est pour ceux qui veulent programmer plus près du matériel — microcontrôleurs, temps réel, protocoles de communication, optimisation énergétique. On programme en C et assembleur, on lit des datasheets, on soude sur des cartes prototypes. C'est exigeant, mais c'est une des rares filières en France qui prépare vraiment aux postes d'ingénieur firmware dans des secteurs comme l'automobile, le médical ou l'aérospatial.</p>
+
+                    <h3>Compétences développées</h3>
+                    <ul class="liste-tri grille-comp">
+                        <li>Programmation bas niveau : C, C++, assembleur ARM</li>
+                        <li>Microcontrôleurs & cartes embarquées (STM32, Arduino, Raspberry Pi)</li>
+                        <li>Systèmes d'exploitation temps réel (RTOS : FreeRTOS, Zephyr)</li>
+                        <li>Protocoles IoT : MQTT, CoAP, Zigbee, LoRa, BLE</li>
+                        <li>Interfaçage matériel : SPI, I²C, UART, CAN</li>
+                        <li>Simulation & modélisation (Simulink, Proteus)</li>
+                    </ul>
+
+                    <h3>Débouchés professionnels</h3>
+                    <table class="table-debouches">
+                        <thead>
+                            <tr>
+                                <th>Métier</th>
+                                <th>Secteurs typiques</th>
+                                <th>Salaire débutant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ingénieur développement embarqué</td><td>Automobile, aérospatial, industrie</td><td>38 000 – 48 000 €</td></tr>
+                            <tr><td>Ingénieur IoT / systèmes connectés</td><td>Domotique, énergie, santé connectée</td><td>40 000 – 50 000 €</td></tr>
+                            <tr><td>Ingénieur firmware / BSP</td><td>Semiconducteurs, EMS</td><td>42 000 – 54 000 €</td></tr>
+                            <tr><td>Architecte systèmes temps réel</td><td>Défense, transport, médical</td><td>50 000 €+</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Comparatif des filières</h2>
+            
+            <div class="tableau-wrapper anim-fadein">
+                <table class="table-comparatif">
+                    <thead>
+                        <tr>
+                            <th>Critère</th>
+                            <th>IT & Software</th>
+                            <th>Data Science & IA</th>
+                            <th>Sécurité & Réseaux</th>
+                            <th>Systèmes Embarqués</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Programmation orientée objet</td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mathématiques avancées</td>
+                            <td><span class="badge-non">Non</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-non">Non</span></td>
+                            <td><span class="badge-non">Non</span></td>
+                        </tr>
+                        <tr>
+                            <td>Travaux pratiques réseaux</td>
+                            <td><span class="badge-non">Non</span></td>
+                            <td><span class="badge-non">Non</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                        </tr>
+                        <tr>
+                            <td>Projets agiles longue durée</td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-non">Non</span></td>
+                            <td><span class="badge-non">Non</span></td>
+                        </tr>
+                        <tr>
+                            <td>Alternance disponible</td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                        </tr>
+                        <tr>
+                            <td>Accès en admission parallèle Bac+3</td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                            <td><span class="badge-oui">Oui</span></td>
+                        </tr>
+                        <tr>
+                            <td>Partenariats entreprises dédiés</td>
+                            <td>Capgemini, Sopra Steria</td>
+                            <td>BNP Paribas, DataStax</td>
+                            <td>Thales, ANSSI partenaire</td>
+                            <td>Renault, STMicroelectronics</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 860px;">
+            
+                <h2 id="pfe-titre">Projet de Fin d'Études & stages obligatoires</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;" class="anim-fadein">
+                <div style="background: var(--blanc); border-radius: 8px; padding: 28px; box-shadow: 0 2px 14px rgba(10,49,108,0.08);">
+                    <h3 style="color: #1e2937; font-size: 17px; margin-bottom: 14px;">Projet de Fin d'Études (PFE)</h3>
+                    <p style="font-size: 14px; color: #555; line-height: 1.7;">Le PFE représente six mois de travail en entreprise sur un projet technique réel. Il est encadré conjointement par un tuteur en entreprise et un enseignant-référent du département. La soutenance se fait devant un jury mixte académique/professionnel. C'est souvent l'occasion d'un recrutement direct à l'issue du stage.</p>
+                    <ul class="liste-tri" style="margin-top: 14px; font-size: 14px; color: #555;">
+                        <li>Durée minimale : 5 à 6 mois</li>
+                        <li>Rapport technique + mémoire requis</li>
+                        <li>Soutenance orale notée sur 20</li>
+                    </ul>
+                </div>
+                <div style="background: var(--blanc); border-radius: 8px; padding: 28px; box-shadow: 0 2px 14px rgba(10,49,108,0.08);">
+                    <h3 style="color: #1e2937; font-size: 17px; margin-bottom: 14px;">Stages intermédiaires</h3>
+                    <p style="font-size: 14px; color: #555; line-height: 1.7;">En dehors du PFE, le cycle ingénieur impose deux stages intermédiaires obligatoires pour valider le diplôme. Ils permettent de découvrir différents environnements professionnels avant de se focaliser sur un projet de fin d'études dans son domaine de prédilection.</p>
+                    <ul class="liste-tri" style="margin-top: 14px; font-size: 14px; color: #555;">
+                        <li>Stage de 1re année CI : 2 mois minimum (assistant ingénieur)</li>
+                        <li>Stage de 2e année CI : 3 mois minimum (ingénieur junior)</li>
+                        <li>Évaluation par rapport et entretien</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 32px; background: var(--bleu); border-radius: 8px; padding: 32px; color: var(--blanc); text-align: center;" class="anim-fadein">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Vous souhaitez candidater en cycle ingénieur ?</h3>
+                <p style="font-size: 14px; opacity: 0.85; margin-bottom: 20px;">Consultez les modalités d'admission sur le site institutionnel ou prenez contact avec le service des admissions pour toute question sur votre dossier.</p>
+                <a href="../contact/index.html" class="btn" style="background: var(--jaune); color: var(--bleu); font-family: 'Montserrat', sans-serif; font-weight: 700;">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="../vie-etudiante/index.html">Vie étudiante</a><a href="../partenariats/index.html">Partenariats</a><a href="../permanences/index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Formations</h4><nav class="footer-nav"><a href="index.html">Vue d'ensemble</a><a href="bachelor.html">Bachelors</a><a href="cycle-ingenieur.html">Cycle ingénieur</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

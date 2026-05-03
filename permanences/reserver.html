@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réserver un créneau de permanence avec un enseignant du département Informatique EFREI.">
+    <title>Réserver un créneau — EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../formations/index.html">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="../vie-etudiante/index.html">Vie étudiante</a></li>
+                    <li><a href="../partenariats/index.html">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="index.html" class="actif">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html">Permanences</a></li>
+                <li>Réserver un créneau</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Réserver un créneau</h1>
+            <p>Remplissez le formulaire ci-dessous pour enregistrer votre réservation de permanence.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; max-width: 1000px; margin: 0 auto;">
+
+                <div>
+                    <h2 style="color: var(--bleu); font-size: 20px; margin-bottom: 20px;">Avant de réserver</h2>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="background: #f5f7fb; border-radius: 8px; padding: 18px;">
+                            <p style="font-family:'Montserrat',sans-serif; font-weight:600; font-size:14px; color:var(--bleu); margin-bottom:8px;">&#128197; Disponibilités</p>
+                            <p style="font-size:13.5px; color:#666; line-height:1.6;">Consultez d'abord l'agenda pour vérifier qu'un créneau est bien libre avant de remplir ce formulaire.</p>
+                            <a href="agenda.html" style="font-size:13px; color:var(--bleu); font-weight:600; display:inline-block; margin-top:8px;">Voir l'agenda →</a>
+                        </div>
+                        <div style="background: #f5f7fb; border-radius: 8px; padding: 18px;">
+                            <p style="font-family:'Montserrat',sans-serif; font-weight:600; font-size:14px; color:var(--bleu); margin-bottom:8px;">&#128221; Annulation</p>
+                            <p style="font-size:13.5px; color:#666; line-height:1.6;">En cas d'empêchement, pensez à annuler votre réservation via la page « Mes réservations » pour libérer le créneau.</p>
+                        </div>
+                        <div style="background: #f5f7fb; border-radius: 8px; padding: 18px;">
+                            <p style="font-family:'Montserrat',sans-serif; font-weight:600; font-size:14px; color:var(--bleu); margin-bottom:8px;">&#128172; Questions urgentes</p>
+                            <p style="font-size:13.5px; color:#666; line-height:1.6;">Pour une demande urgente, contactez directement l'enseignant par email. Les coordonnées sont disponibles sur la page dédiée.</p>
+                            <a href="../enseignants/coordonnees.html" style="font-size:13px; color:var(--bleu); font-weight:600; display:inline-block; margin-top:8px;">Coordonnées →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 style="color: var(--bleu); font-size: 20px; margin-bottom: 24px;">Formulaire de réservation</h2>
+                    <form id="form-reservation" novalidate>
+                        <div class="form-grille">
+                            <div class="champ">
+                                <label for="resa-nom">Nom <span class="req">*</span></label>
+                                <input type="text" id="resa-nom" name="nom" required minlength="2" placeholder="Votre nom">
+                                <span class="erreur-msg">Ce champ est obligatoire.</span>
+                            </div>
+                            <div class="champ">
+                                <label for="resa-prenom">Prénom <span class="req">*</span></label>
+                                <input type="text" id="resa-prenom" name="prenom" required minlength="2" placeholder="Votre prénom">
+                                <span class="erreur-msg">Ce champ est obligatoire.</span>
+                            </div>
+                            <div class="champ pleine-largeur">
+                                <label for="resa-email">Adresse e-mail EFREI <span class="req">*</span></label>
+                                <input type="email" id="resa-email" name="email" required placeholder="prenom.nom@efrei.net">
+                                <span class="erreur-msg">Adresse e-mail invalide.</span>
+                            </div>
+                            <div class="champ pleine-largeur">
+                                <label for="resa-enseignant">Enseignant <span class="req">*</span></label>
+                                <select id="resa-enseignant" name="enseignant" required>
+                                    <option value="" disabled selected>Sélectionnez un enseignant</option>
+                                </select>
+                                <span class="erreur-msg">Veuillez sélectionner un enseignant.</span>
+                            </div>
+                            <div class="champ">
+                                <label for="resa-date">Date souhaitée <span class="req">*</span></label>
+                                <input type="date" id="resa-date" name="date" required>
+                                <span class="erreur-msg">Veuillez sélectionner une date.</span>
+                            </div>
+                            <div class="champ">
+                                <label for="resa-creneau">Créneau horaire <span class="req">*</span></label>
+                                <select id="resa-creneau" name="creneau" required>
+                                    <option value="" disabled selected>Sélectionnez un créneau</option>
+                                </select>
+                                <span class="erreur-msg">Veuillez sélectionner un créneau.</span>
+                            </div>
+                            <div class="champ pleine-largeur">
+                                <label for="resa-motif">Motif de la réunion</label>
+                                <textarea id="resa-motif" name="motif" placeholder="Précisez brièvement l'objet de votre demande (aide sur un exercice, question sur le projet, suivi de TP…)"></textarea>
+                            </div>
+                        </div>
+                        <p style="font-size: 12.5px; color: #aaa; margin-bottom: 20px;">
+                            Les champs marqués d'un <span style="color:#d63031;">*</span> sont obligatoires.
+                        </p>
+                        <button type="submit" class="btn btn-bleu" style="width:100%; justify-content:center;">Confirmer la réservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="../formations/index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="../vie-etudiante/index.html">Vie étudiante</a><a href="../partenariats/index.html">Partenariats</a><a href="index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Permanences</h4><nav class="footer-nav" aria-label="Liens permanences"><a href="agenda.html">Agenda</a><a href="reserver.html">Réserver un créneau</a><a href="mes-reservations.html">Mes réservations</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/forms.js"></script>
+    <script src="../js/permanences.js"></script>
+</body>
+</html>

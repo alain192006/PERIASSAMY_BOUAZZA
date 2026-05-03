@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Associations étudiantes du département Informatique EFREI — Coding Club, Cyber Team, Robotics Club, E-Sport et plus.">
+    <title>Associations — Vie étudiante EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .asso-grille { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+        .asso-carte { background: var(--blanc); border-radius: 10px; overflow: hidden; box-shadow: 0 3px 18px rgba(10,49,108,0.09); border: 1px solid #eef0f5; display: flex; flex-direction: column; }
+        .asso-bandeau { height: 8px; }
+        .asso-corps { padding: 28px; flex: 1; }
+        .asso-tag { display: inline-block; border-radius: 20px; padding: 4px 13px; font-size: 12px; font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 14px; color: #fff; }
+        .asso-nom { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 18px; color: var(--bleu); margin-bottom: 10px; }
+        .asso-desc { font-size: 14px; color: #555; line-height: 1.7; margin-bottom: 14px; }
+        .asso-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: #888; border-top: 1px solid #eef0f5; padding-top: 14px; margin-top: auto; }
+        .table-events { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .table-events th { background: var(--bleu); color: var(--blanc); padding: 11px 16px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: left; }
+        .table-events td { border: 1px solid #e8ecf5; padding: 11px 16px; }
+        .table-events tr:nth-child(even) td { background: #f8f9fd; }
+        .table-events td:first-child { font-weight: 600; color: var(--bleu); }
+        .badge-asso { display: inline-block; border-radius: 4px; padding: 2px 8px; font-size: 12px; font-weight: 600; color: #fff; }
+        @media (max-width: 768px) {
+            .asso-grille { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../formations/index.html">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="index.html" class="actif">Vie étudiante</a></li>
+                    <li><a href="../partenariats/index.html">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="../permanences/index.html">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html">Vie étudiante</a></li>
+                <li>Associations</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Associations étudiantes</h1>
+            <p>Cinq associations actives pour explorer la tech autrement, networker et préparer son entrée dans la vie professionnelle.</p>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container" style="max-width: 780px;">
+            <p style="font-size: 15px; color: #555; line-height: 1.8;">Les associations du département Informatique sont gérées par les étudiants eux-mêmes, avec le soutien de l'administration et de quelques enseignants référents. Elles organisent des événements techniques, des compétitions, des ateliers et des soirées networking tout au long de l'année. S'impliquer dans une asso, c'est une vraie valeur ajoutée sur un CV — et souvent, c'est là que se forgent les meilleures amitiés de promo.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+                <h2>Nos associations</h2>
+            
+            <div class="asso-grille anim-fadein">
+
+                <div class="asso-carte">
+                    <div class="asso-bandeau" style="background: linear-gradient(to right, #0A316C, #1a4fa0);"></div>
+                    <div class="asso-corps">
+                        <span class="asso-tag" style="background: #0A316C;">Développement</span>
+                        <div class="asso-nom">EFREI Coding Club</div>
+                        <p class="asso-desc">L'asso tech principale du département. On y fait des hackathons internes, des sessions de code review entre promo, des ateliers sur des technos qui ne sont pas au programme (Rust, WebAssembly, gamedev…). L'ambiance est relax mais le niveau monte vite. Les sessions ont lieu tous les jeudis soir en salle B205.</p>
+                        <ul class="liste-tri" style="font-size: 13.5px; color: #555; margin-bottom: 14px;">
+                            <li>Hackathon interne annuel (48h non-stop)</li>
+                            <li>Sessions "dev kata" bi-hebdomadaires</li>
+                            <li>Participation à des compétitions comme le Hackathon BNP ou l'EFREI Hackday</li>
+                        </ul>
+                        <div class="asso-meta">
+                            <span>&#128101; ~85 membres</span>
+                            <span>&#128197; Réunions le jeudi 18h</span>
+                            <span>&#128205; Salle B205</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="asso-carte">
+                    <div class="asso-bandeau" style="background: linear-gradient(to right, #c0392b, #e74c3c);"></div>
+                    <div class="asso-corps">
+                        <span class="asso-tag" style="background: #c0392b;">Cybersécurité</span>
+                        <div class="asso-nom">EFREI Cyber Team</div>
+                        <p class="asso-desc">L'équipe cyber regroupe les étudiants passionnés par la sécurité offensive et défensive. On organise des sessions de CTF (Capture The Flag), des workshops sur des outils comme Burp Suite, Metasploit ou Wireshark, et on s'entraîne en équipe pour des compétitions nationales. Ouverte à tous niveaux — les débutants sont les bienvenus.</p>
+                        <ul class="liste-tri" style="font-size: 13.5px; color: #555; margin-bottom: 14px;">
+                            <li>CTF hebdomadaire sur des plateformes comme HackTheBox et Root-Me</li>
+                            <li>Participation au CTF EFREI et au FCSC (France Cybersecurity Challenge)</li>
+                            <li>Ateliers forensique, reverse engineering, web exploitation</li>
+                        </ul>
+                        <div class="asso-meta">
+                            <span>&#128101; ~60 membres</span>
+                            <span>&#128197; Réunions le mardi 19h</span>
+                            <span>&#128205; Salle A103</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="asso-carte">
+                    <div class="asso-bandeau" style="background: linear-gradient(to right, #117a65, #1abc9c);"></div>
+                    <div class="asso-corps">
+                        <span class="asso-tag" style="background: #117a65;">Robotique & IoT</span>
+                        <div class="asso-nom">EFREI Robotics Club</div>
+                        <p class="asso-desc">Le Robotics Club travaille sur des projets à la frontière du software et du hardware : robots autonomes, bras mécaniques contrôlés via Raspberry Pi, capteurs communicants en LoRa, et même de la vision par ordinateur embarquée. Le club possède son propre espace matériel dans le Lab IoT. Les projets durent souvent tout un semestre et se terminent par une démo publique.</p>
+                        <ul class="liste-tri" style="font-size: 13.5px; color: #555; margin-bottom: 14px;">
+                            <li>Compétition robotique EFREI Cup (finale en mai)</li>
+                            <li>Participation à Eurobot et à des concours régionaux</li>
+                            <li>Ateliers soudure, électronique, impression 3D</li>
+                        </ul>
+                        <div class="asso-meta">
+                            <span>&#128101; ~40 membres</span>
+                            <span>&#128197; Réunions le mercredi 17h</span>
+                            <span>&#128205; Lab C101</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="asso-carte">
+                    <div class="asso-bandeau" style="background: linear-gradient(to right, #6c3483, #a569bd);"></div>
+                    <div class="asso-corps">
+                        <span class="asso-tag" style="background: #6c3483;">Gaming & E-Sport</span>
+                        <div class="asso-nom">EFREI E-Sport</div>
+                        <p class="asso-desc">L'association e-sport fédère les joueurs de tous horizons autour de compétitions internes et de tournois inter-écoles. Elle représente EFREI lors de la Nationale des E-Sports étudiants (NESA) et organise des LAN parties régulières. Au-delà du gaming, l'asso développe aussi des outils et des bots pour animer ses communautés Discord — ce qui en fait un labo de dev inattendu.</p>
+                        <ul class="liste-tri" style="font-size: 13.5px; color: #555; margin-bottom: 14px;">
+                            <li>Tournois internes : League of Legends, Valorant, CS2, FIFA</li>
+                            <li>Participation aux tournois NESA & ESL Étudiante</li>
+                            <li>Développement de bots Discord et d'outils de stats</li>
+                        </ul>
+                        <div class="asso-meta">
+                            <span>&#128101; ~110 membres</span>
+                            <span>&#128197; LAN tous les vendredis 20h</span>
+                            <span>&#128205; Salle B204</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 28px;" class="anim-fadein">
+                <div class="asso-carte" style="flex-direction: row; align-items: stretch;">
+                    <div style="width: 8px; background: linear-gradient(to bottom, #f39c12, #e67e22); border-radius: 10px 0 0 10px; flex-shrink: 0;"></div>
+                    <div class="asso-corps" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding: 28px;">
+                        <div>
+                            <span class="asso-tag" style="background: #e67e22;">Open Source & IA</span>
+                            <div class="asso-nom">EFREI Dev & Open Source</div>
+                            <p class="asso-desc">La plus jeune des assos, créée il y a deux ans par des étudiants de 3e année frustrés de ne pas trouver d'endroit pour contribuer à de vrais projets open source. Aujourd'hui, elle maintient quelques dépôts GitHub actifs (outils d'emploi du temps, extension navigateur, chatbot FAQ EFREI) et organise des conférences techniques avec des développeurs invités de l'extérieur.</p>
+                        </div>
+                        <div>
+                            <ul class="liste-tri" style="font-size: 13.5px; color: #555; margin-bottom: 16px;">
+                                <li>Contributions régulières à des projets open source sur GitHub</li>
+                                <li>Cycle de conférences mensuelles "Tech Talks EFREI"</li>
+                                <li>Atelier IA générative et prompt engineering</li>
+                                <li>Accompagnement sur les projets perso des membres</li>
+                            </ul>
+                            <div class="asso-meta">
+                                <span>&#128101; ~55 membres</span>
+                                <span>&#128197; Réunions le lundi 18h30</span>
+                                <span>&#128205; Salle B205</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-fond-clair">
+        <div class="container">
+            
+                <h2 id="agenda-titre">Prochains événements</h2>
+            
+            <div class="tableau-wrapper anim-fadein">
+                <table class="table-events">
+                    <thead>
+                        <tr>
+                            <th>Événement</th>
+                            <th>Association</th>
+                            <th>Date</th>
+                            <th>Lieu</th>
+                            <th>Inscription</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hackathon EFREI 2025 — 48h</td>
+                            <td><span class="badge-asso" style="background:#0A316C;">Coding Club</span></td>
+                            <td>14–15 juin 2025</td>
+                            <td>Campus Villejuif — Amphi A</td>
+                            <td>Ouverte (limite 80 participants)</td>
+                        </tr>
+                        <tr>
+                            <td>CTF Nuit de la Sécurité</td>
+                            <td><span class="badge-asso" style="background:#c0392b;">Cyber Team</span></td>
+                            <td>20 juin 2025</td>
+                            <td>Salle A103</td>
+                            <td>Ouverte (inscription Discord)</td>
+                        </tr>
+                        <tr>
+                            <td>Tournoi Valorant inter-écoles</td>
+                            <td><span class="badge-asso" style="background:#6c3483;">E-Sport</span></td>
+                            <td>27 juin 2025</td>
+                            <td>En ligne + Salle B204</td>
+                            <td>Par équipes de 5</td>
+                        </tr>
+                        <tr>
+                            <td>Tech Talk : IA générative en production</td>
+                            <td><span class="badge-asso" style="background:#e67e22;">Dev & Open Source</span></td>
+                            <td>3 juillet 2025</td>
+                            <td>Amphi B — accessible à tous</td>
+                            <td>Libre (pas d'inscription)</td>
+                        </tr>
+                        <tr>
+                            <td>EFREI Robotics Cup — finale</td>
+                            <td><span class="badge-asso" style="background:#117a65;">Robotics Club</span></td>
+                            <td>10 juillet 2025</td>
+                            <td>Cour intérieure campus</td>
+                            <td>Spectateurs bienvenus</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width: 700px;">
+            
+                <h2 id="rejoindre-titre">Rejoindre une association</h2>
+            
+            <p style="color: #555; margin-bottom: 28px;" class="anim-fadein">Remplissez ce formulaire pour manifester votre intérêt. Un membre du bureau de l'association vous contactera dans les 48h pour vous donner les informations de connexion Discord et les prochaines dates de réunion.</p>
+            <form id="form-asso" novalidate class="anim-fadein">
+                <div class="form-grille">
+                    <div class="champ">
+                        <label for="asso-nom">Nom <span class="req">*</span></label>
+                        <input type="text" id="asso-nom" name="nom" required minlength="2" placeholder="Votre nom">
+                        <span class="erreur-msg">Ce champ est obligatoire.</span>
+                    </div>
+                    <div class="champ">
+                        <label for="asso-prenom">Prénom <span class="req">*</span></label>
+                        <input type="text" id="asso-prenom" name="prenom" required minlength="2" placeholder="Votre prénom">
+                        <span class="erreur-msg">Ce champ est obligatoire.</span>
+                    </div>
+                    <div class="champ pleine-largeur">
+                        <label for="asso-email">Adresse e-mail EFREI <span class="req">*</span></label>
+                        <input type="email" id="asso-email" name="email" required placeholder="prenom.nom@efrei.net">
+                        <span class="erreur-msg">Adresse e-mail invalide.</span>
+                    </div>
+                    <div class="champ pleine-largeur">
+                        <label for="asso-choix">Association souhaitée <span class="req">*</span></label>
+                        <select id="asso-choix" name="association" required>
+                            <option value="" disabled selected>Sélectionnez une association</option>
+                            <option value="coding">EFREI Coding Club</option>
+                            <option value="cyber">EFREI Cyber Team</option>
+                            <option value="robotics">EFREI Robotics Club</option>
+                            <option value="esport">EFREI E-Sport</option>
+                            <option value="opensource">EFREI Dev & Open Source</option>
+                        </select>
+                        <span class="erreur-msg">Veuillez sélectionner une association.</span>
+                    </div>
+                    <div class="champ pleine-largeur">
+                        <label for="asso-promo">Promotion</label>
+                        <select id="asso-promo" name="promo">
+                            <option value="" disabled selected>Votre année</option>
+                            <option value="L1">Bachelor 1re année</option>
+                            <option value="L2">Bachelor 2e année</option>
+                            <option value="L3">Bachelor 3e année</option>
+                            <option value="CI1">Cycle ingénieur 1re année</option>
+                            <option value="CI2">Cycle ingénieur 2e année</option>
+                            <option value="CI3">Cycle ingénieur 3e année (PFE)</option>
+                        </select>
+                    </div>
+                    <div class="champ pleine-largeur">
+                        <label for="asso-message">Pourquoi vous rejoindre ?</label>
+                        <textarea id="asso-message" name="message" placeholder="En quelques lignes, dites-nous ce qui vous attire dans cette association et ce que vous pourriez y apporter…"></textarea>
+                    </div>
+                </div>
+                <p style="font-size: 12.5px; color: #aaa; margin-bottom: 20px;">Les champs marqués d'un <span style="color:#d63031;">*</span> sont obligatoires.</p>
+                <button type="submit" class="btn btn-bleu" style="width:100%; justify-content:center;">Envoyer ma demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="../formations/index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="index.html">Vie étudiante</a><a href="../partenariats/index.html">Partenariats</a><a href="../permanences/index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Vie étudiante</h4><nav class="footer-nav" aria-label="Liens vie étudiante"><a href="service-informatique.html">Service informatique</a><a href="associations.html">Associations</a><a href="academique-international.html">International</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/forms.js"></script>
+</body>
+</html>

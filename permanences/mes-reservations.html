@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mes réservations de permanences — département Informatique EFREI.">
+    <title>Mes réservations — EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../formations/index.html">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="../vie-etudiante/index.html">Vie étudiante</a></li>
+                    <li><a href="../partenariats/index.html">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="index.html" class="actif">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html">Permanences</a></li>
+                <li>Mes réservations</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Mes réservations</h1>
+            <p>Retrouvez ici toutes vos réservations de permanences en cours. Vous pouvez annuler une réservation à tout moment.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width: 860px;">
+
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 28px;">
+                <h2 style="color: var(--bleu); font-size: 22px;">Mes créneaux réservés</h2>
+                <a href="reserver.html" class="btn btn-bleu" style="font-size: 13px; padding: 10px 20px;">+ Nouvelle réservation</a>
+            </div>
+
+            <!-- Rempli dynamiquement par permanences.js -->
+            <div id="liste-reservations" aria-live="polite"></div>
+
+            <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid #eef0f5; display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="agenda.html" class="btn btn-contour">Voir l'agenda</a>
+                <a href="../enseignants/coordonnees.html" class="btn btn-contour">Coordonnées des enseignants</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="../formations/index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="../vie-etudiante/index.html">Vie étudiante</a><a href="../partenariats/index.html">Partenariats</a><a href="index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Permanences</h4><nav class="footer-nav" aria-label="Liens permanences"><a href="agenda.html">Agenda</a><a href="reserver.html">Réserver un créneau</a><a href="mes-reservations.html">Mes réservations</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/permanences.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda des permanences — consultez les disponibilités des enseignants et réservez un créneau.">
+    <title>Agenda des permanences — EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .agenda-tableau { width: 100%; border-collapse: collapse; min-width: 700px; }
+        .agenda-tableau th { background-color: var(--bleu); color: var(--blanc); padding: 12px 10px; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: center; }
+        .agenda-tableau th:first-child { text-align: left; min-width: 130px; }
+        .agenda-tableau td { border: 1px solid #e8ecf5; padding: 10px 8px; text-align: center; vertical-align: middle; font-size: 13px; }
+        .agenda-tableau td:first-child { font-weight: 600; color: var(--bleu); text-align: left; background-color: #f8f9fd; white-space: nowrap; }
+        .agenda-tableau tr:hover td:not(:first-child) { background-color: rgba(10,49,108,0.03); }
+        .filtre-bloc { background: #f5f7fb; border-radius: 8px; padding: 24px; margin-bottom: 32px; display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap; }
+        .filtre-bloc label { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--bleu); display: block; margin-bottom: 7px; }
+        .filtre-bloc select { padding: 10px 14px; border: 2px solid #dde3f0; border-radius: 6px; font-family: 'Open Sans', sans-serif; font-size: 14px; color: #333; background: var(--blanc); outline: none; min-width: 280px; cursor: pointer; }
+        .filtre-bloc select:focus { border-color: var(--bleu); }
+        .legende { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+        .legende-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #555; }
+        .legende-badge { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-efrei.svg" alt="EFREI Paris" class="logo-img">
+            </a>
+            <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../formations/index.html">Formations</a></li>
+                    <li><a href="../enseignants/index.html">Enseignants</a></li>
+                    <li><a href="../vie-etudiante/index.html">Vie étudiante</a></li>
+                    <li><a href="../partenariats/index.html">Partenariats</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="index.html" class="actif">Permanences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="fil-ariane">
+        <div class="container">
+            <ol>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html">Permanences</a></li>
+                <li>Agenda</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container page-banner-inner">
+            <div class="ligne-couleur"></div>
+            <h1>Agenda des permanences</h1>
+            <p>Sélectionnez un enseignant pour voir ses disponibilités et cliquez sur un créneau libre pour le réserver.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="filtre-bloc">
+                <div>
+                    <label for="filtre-enseignant">Enseignant</label>
+                    <select id="filtre-enseignant" aria-label="Sélectionner un enseignant">
+                        <!-- rempli par JS -->
+                    </select>
+                </div>
+                <a href="reserver.html" class="btn btn-bleu" style="margin-bottom: 2px;">Réserver directement</a>
+            </div>
+
+            <div class="legende">
+                <div class="legende-item">
+                    <span class="legende-badge creno-libre">Libre</span>
+                    Créneau disponible — cliquez pour réserver
+                </div>
+                <div class="legende-item">
+                    <span class="legende-badge creno-pris">Réservé</span>
+                    Déjà pris par un autre étudiant
+                </div>
+                <div class="legende-item">
+                    <span class="legende-badge creno-moi">Ma réservation</span>
+                    Votre réservation
+                </div>
+            </div>
+
+            <div class="tableau-wrapper">
+                <table class="agenda-tableau" aria-label="Agenda des permanences" aria-live="polite">
+                    <thead>
+                        <tr>
+                            <th>Horaire</th>
+                            <th>Lundi</th>
+                            <th>Mardi</th>
+                            <th>Mercredi</th>
+                            <th>Jeudi</th>
+                            <th>Vendredi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corps-agenda">
+                        <!-- Rempli dynamiquement par permanences.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="font-size: 12.5px; color: #aaa; margin-top: 14px;">
+                * Les créneaux affichés correspondent à la semaine type hors période d'examens.
+                Les disponibilités peuvent varier selon l'enseignant. Pour les intervenants, contactez directement par email.
+            </p>
+
+            <div style="margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="mes-reservations.html" class="btn btn-contour">Voir mes réservations</a>
+                <a href="../enseignants/coordonnees.html" class="btn btn-contour">Coordonnées des enseignants</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grille">
+                <div class="footer-col"><a href="../index.html" class="logo" style="margin-bottom:16px;display:inline-flex;"><img src="../images/logo-efrei.svg" alt="EFREI Paris — Département Informatique" class="logo-img"></a><p>Grande école d'ingénieurs généralistes et d'experts du numérique.</p><div class="accreditations" style="margin-top:18px;"><span class="badge-accred">CGE</span><span class="badge-accred">CTI</span><span class="badge-accred">EESPIG</span></div></div>
+                <div class="footer-col"><h4>Navigation</h4><nav class="footer-nav"><a href="../formations/index.html">Formations</a><a href="../enseignants/index.html">Corps enseignant</a><a href="../vie-etudiante/index.html">Vie étudiante</a><a href="../partenariats/index.html">Partenariats</a><a href="index.html">Permanences</a><a href="../contact/apropos.html">À propos</a></nav></div>
+                <div class="footer-col"><h4>Permanences</h4><nav class="footer-nav" aria-label="Liens permanences"><a href="agenda.html">Agenda</a><a href="reserver.html">Réserver un créneau</a><a href="mes-reservations.html">Mes réservations</a></nav></div>
+                <div class="footer-col"><h4>Contact</h4><div class="footer-contact-info"><span>&#128205; 30-32 avenue de la République, 94800 Villejuif</span><span>&#128222; +33 (0)1 46 77 46 77</span><span>&#128231; <a href="mailto:informatique@efrei.fr" style="color:rgba(255,255,255,0.6);">informatique@efrei.fr</a></span></div></div>
+            </div>
+            <div class="footer-bas"><p>&copy; 2025 EFREI Paris — Département Informatique. Tous droits réservés.</p><a href="../contact/apropos.html">À propos de ce site</a></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/permanences.js"></script>
+</body>
+</html>
