@@ -85,13 +85,15 @@ function initCarousel(selector) {
     wrap.addEventListener('mouseenter', function() { clearInterval(timer); });
     wrap.addEventListener('mouseleave', function() { timer = setInterval(next, 5000); });
 
-    // swipe sur mobile - jsp trop comment ca marche mais ca marche
+    // support du swipe tactile : on enregistre la position au debut du toucher,
+    // et a la fin on regarde dans quel sens le doigt a bouge
     var startX = 0;
     wrap.addEventListener('touchstart', function(e) {
         startX = e.touches[0].clientX;
     });
     wrap.addEventListener('touchend', function(e) {
         var diff = startX - e.changedTouches[0].clientX;
+        // seuil de 50px pour eviter les faux positifs
         if (Math.abs(diff) > 50) {
             if (diff > 0) next();
             else prev();
