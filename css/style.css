@@ -438,7 +438,7 @@ nav ul li a.actif::after {
     transform: translateY(-2px);
 }
 
-/* carousel */
+/* carousel -- on a galéré avec les transitions au debut, on avait mis display:none sur les slides mais ca cassait l'animation */
 .carousel-wrap {
     position: relative;
     overflow: hidden;
@@ -1450,7 +1450,7 @@ footer {
     .form-grille          { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
+/* TODO: verifier sur iphone 12 la nav hamburger, ca deborde un peu */@media (max-width: 768px) {
     h1 { font-size: 27px; }
     h2 { font-size: 23px; }
 
@@ -1537,3 +1537,35 @@ footer {
     .grille-profils{ grid-template-columns: 1fr; }
     .chiffres-grille { grid-template-columns: 1fr 1fr; }
 }
+
+
+/* grille des stats (page accueil) */
+.stats-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-col {
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0;
+    background: transparent;
+    padding: 44px 28px;
+}
+
+.stat-col-last {
+    border-right: none;
+}
+
+/* responsive stats */
+@media (max-width: 700px) {
+    .stats-grille {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stat-col {
+        border-right: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+/* -- a voir si on met ca ailleurs un jour -- */
+/* .chiffres-grille { grid-template-columns: 1fr 1fr 1fr 1fr; } */
